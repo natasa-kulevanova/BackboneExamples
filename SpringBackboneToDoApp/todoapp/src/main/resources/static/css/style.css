@@ -1,0 +1,45 @@
+body {
+	background-color: #eeeeee;
+	font-family: Tahoma;
+}
+
+#allToDos{
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.toDoElement{
+    padding: 5px 0 5px 0;
+}
+
+.delete_btn{
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.button-add{
+    border-radius: 5px;
+	padding: .5em;
+	text-decoration: none;
+    background-color: #ff751a;
+    margin-left: 10px;
+    color: white;
+}
+
+.button-js{
+	border-radius: 5px;
+	color: black;
+	padding: .5em;
+	text-decoration: none;
+    background-color: darkgray;
+    margin-left: 10px;
+}
+
+.button_green{
+    background-color: darkgreen;
+    color: white;
+}
