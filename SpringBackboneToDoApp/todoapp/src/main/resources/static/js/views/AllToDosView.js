@@ -2,7 +2,7 @@ var app = app || {};
 
 app.allToDosView = Backbone.View.extend({
 
-    tagName: "section",
+    el: "#allToDos",
     
     events: {
  
@@ -18,14 +18,14 @@ app.allToDosView = Backbone.View.extend({
     },
                                         
     render: function(){
-    	this.$el.empty();
+    	this.$el.html('');
         this.collection.each(this.addToDo, this);
-        $("#allToDos").html(this.el);
+        return this;
     },
     
       addToDo: function(toDo){
         var todoView =  new app.toDoView({ model: toDo });
-        this.$el.append(todoView.render().el);
+        this.$el.append(todoView.render().$el);
     },
     
     updateView: function(){

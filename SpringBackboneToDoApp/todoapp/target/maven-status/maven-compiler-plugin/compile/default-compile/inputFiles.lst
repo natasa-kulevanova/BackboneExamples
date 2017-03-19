@@ -1,6 +1,6 @@
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\dao\ToDoDao.java
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\entities\Todo.java
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\services\ToDoService.java
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\controller\ToDoRestController.java
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\dao\HibernateConnection.java
-C:\Users\NATASA\Documents\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\App.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\controller\ToDoRestController.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\App.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\services\ToDoService.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\dao\HibernateConnection.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\dao\ToDoDao.java
+C:\Users\NATASA\Documents\BackboneExamples\SpringBackboneToDoApp\todoapp\src\main\java\com\seavus\entities\Todo.java

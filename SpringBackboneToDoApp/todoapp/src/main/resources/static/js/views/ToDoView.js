@@ -19,9 +19,6 @@ app.toDoView = Backbone.View.extend({
     render: function(){
         var toDoTemplate = this.template(this.model.toJSON());
         this.$el.html(toDoTemplate);
-        if(this.model.get('done')){
-        	$("#toDo").attr('checked', true);
-        }
         return this;
     },
     
@@ -30,11 +27,9 @@ app.toDoView = Backbone.View.extend({
         var todoItem = _.find(toDoCollection.models, function(item){
         		return item.id == that.model.id;
         });
-        todoItem.set('done', $("#toDo").is(":checked"));
+        todoItem.set('done', !todoItem.get("done"));
         todoItem.save({},{
-    		success: function(model, response){
-    			alert(that.model.get('title')+" is updated ");
-    		}
+    		success: function(model, response){}
     	});
     },
     
