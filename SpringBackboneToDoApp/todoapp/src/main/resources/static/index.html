@@ -27,14 +27,14 @@
     
     <div id="controls"></div>
     
-    <script id="completedTodos" type="text/template">
+    <script id="completedBtn" type="text/template">
     	<a href="#completedToDos" id="completed_todos" class="button-js button_green">View completed todos</a>
     </script>
    
-   <div id="completedView"></div>
+   <ul id="completedView"></ul>
    
    <script id="completedToDoTmpl" type="text/template">
-		<div id="compl_todo"><%= title %></div>
+		<li id="compl_todo"><%= title %></li>
 	</script>
    
     <script src="js/libs/jquery.js"></script>

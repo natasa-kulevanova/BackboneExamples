@@ -25,7 +25,7 @@ app.allToDosView = Backbone.View.extend({
     
       addToDo: function(toDo){
         var todoView =  new app.toDoView({ model: toDo });
-        this.$el.append(todoView.render().$el);
+        this.$el.append(todoView.render().el);
     },
     
     updateView: function(){

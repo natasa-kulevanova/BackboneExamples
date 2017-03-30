@@ -4,7 +4,7 @@ app.controlsView = Backbone.View.extend({
 
     tagName: "div",
     
-    template: _.template($("#completedTodos").html()),
+    template: _.template($("#completedBtn").html()),
     
     
     initialize: function(){
