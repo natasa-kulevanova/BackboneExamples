@@ -39,8 +39,6 @@ app.toDoView = Backbone.View.extend({
        		return item.id == that.model.id;
            });
     	todoItem.destroy({
-    		contentType: 'application/json',
-    		data: JSON.stringify(todoItem),
     		success: function(model, response){
 				Backbone.trigger('updateToDos', this);
 	    	}

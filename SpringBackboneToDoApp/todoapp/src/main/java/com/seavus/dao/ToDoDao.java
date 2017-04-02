@@ -90,14 +90,14 @@ public class ToDoDao {
 		}
 	}
 
-	public void deleteTodo(Todo todo) {
+	public void deleteTodo(Long id) {
 		Session session = sessionFactory.openSession();
 		Transaction transaction = null;
 		try {
 			transaction = session.beginTransaction();
 			String hql = "DELETE FROM Todo WHERE id = :id";
 			Query query = session.createQuery(hql);
-			query.setParameter("id", todo.getId());
+			query.setParameter("id", id);
 			query.executeUpdate();
 			transaction.commit();
 		} catch (RuntimeException e) {

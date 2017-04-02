@@ -30,8 +30,8 @@ public class ToDoService {
 		this.toDoDao.updateTodo(todo);
 	}
 
-	public void deleteTodo(Todo todo) {
-		this.toDoDao.deleteTodo(todo);
+	public void deleteTodo(Long id) {
+		this.toDoDao.deleteTodo(id);
 	}
 
 }
