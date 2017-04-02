@@ -8,13 +8,13 @@ app.Router = Backbone.Router.extend({
     
     showFirstPage: function(){
     	$("#completedView").hide();
-    	$("#subheader").show();
+    	$("#addNewToDo").show();
     	$("#allToDos").show();
     	$("#controls").show();
     },
     
     showCompletedToDos: function(){
-    	$("#subheader").hide();
+    	$("#addNewToDo").hide();
     	$("#allToDos").hide();
     	$("#controls").hide();
     	var allCompletedTodosView = new app.allCompletedTodosView({collection : toDoCollection});

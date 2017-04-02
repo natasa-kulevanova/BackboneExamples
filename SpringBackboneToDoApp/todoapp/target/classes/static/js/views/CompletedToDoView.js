@@ -4,8 +4,6 @@ app.completedTodoView = Backbone.View.extend({
 
 	tagName: "div",
     
-    
-    
     template: _.template($("#completedToDoTmpl").html()),
     
     initialize: function(){

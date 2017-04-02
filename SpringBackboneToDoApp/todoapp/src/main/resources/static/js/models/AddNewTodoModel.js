@@ -1,13 +1,13 @@
 var app = app || {};
 
-app.controls = Backbone.Model.extend({
+app.addNewToDo = Backbone.Model.extend({
 
     defaults:{
        
     },
     
     initialize : function(){
-       
+        console.log("addNewToDo model is created.");
     }
 
 });

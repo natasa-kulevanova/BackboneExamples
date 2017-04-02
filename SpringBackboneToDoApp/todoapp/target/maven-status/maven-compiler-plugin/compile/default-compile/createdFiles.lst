@@ -1,5 +1,5 @@
-com\seavus\entities\Todo.class
 com\seavus\controller\ToDoRestController.class
+com\seavus\entities\Todo.class
 com\seavus\App.class
 com\seavus\dao\HibernateConnection.class
 com\seavus\services\ToDoService.class

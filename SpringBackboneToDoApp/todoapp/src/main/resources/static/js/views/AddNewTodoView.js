@@ -1,36 +1,35 @@
 var app = app || {};
 
-app.subheaderView = Backbone.View.extend({
+app.addNewToDoView = Backbone.View.extend({
 
     tagName: "div",
-    className: "subheader",
+    className: "addNewTodo",
     
     events: {
     	  "click #add_todo" : "addNewToDo"
     },
     
-    template: _.template($("#subheaderTmpl").html()),
+    template: _.template($("#addNewToDoTemplate").html()),
     
     initialize: function(){
         
     },
                                         
     render: function(){
-        var subheaderTemplate = this.template(this.model.toJSON());
-        this.$el.html(subheaderTemplate);
+        var addNewTodoTemplate = this.template(this.model.toJSON());
+        this.$el.html(addNewTodoTemplate);
         return this;
     },
     
     addNewToDo: function(){
     	var that = this;
     	var todoTitle = $("#new-todo").val();
-    	var todoItem = new app.toDo({ title : todoTitle, done : false});
-    	todoItem.save({},{
+    	$("#new-todo").val('');
+    	toDoCollection.create({ title : todoTitle, done : false}, {
     		success: function(model, response){
-    			$("#new-todo").val('');
     			Backbone.trigger('updateToDos', this);
-    		}
+	    	}
     	});
-    },
+    }
 
 });
