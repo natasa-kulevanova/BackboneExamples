@@ -6,8 +6,8 @@ app.addNewToDoView = Backbone.View.extend({
     className: "addNewTodo",
     
     events: {
-    	  "click #add_todo" : "addNewToDo",
-    	  "enter #new-todo" : "addNewToDo"
+    	  "click #add_todo" : "createNewTodo",
+    	  "keypress #new-todo" : "addNewToDo"
     },
     
     template: _.template($("#addNewToDoTemplate").html()),
@@ -22,7 +22,13 @@ app.addNewToDoView = Backbone.View.extend({
         return this;
     },
     
-    addNewToDo: function(){
+    addNewToDo: function(e){
+    	if(e.which === 13){
+    		this.createNewTodo();
+    	}
+    },
+    
+    createNewTodo: function(){
     	var that = this;
     	var todoTitle = $("#new-todo").val();
     	$("#new-todo").val('');
