@@ -17,7 +17,9 @@ app.Router = Backbone.Router.extend({
     	$("#addNewToDo").hide();
     	$("#allToDos").hide();
     	$("#controls").hide();
-    	var allCompletedTodosView = new app.allCompletedTodosView({collection : toDoCollection});
+    	if(!allCompletedTodosView){
+    		allCompletedTodosView = new app.allCompletedTodosView({collection : toDoCollection});
+    	}
     	$("#completedView").html(allCompletedTodosView.render().el);
     	$("#completedView").show();
     }

@@ -6,7 +6,8 @@ app.addNewToDoView = Backbone.View.extend({
     className: "addNewTodo",
     
     events: {
-    	  "click #add_todo" : "addNewToDo"
+    	  "click #add_todo" : "addNewToDo",
+    	  "enter #new-todo" : "addNewToDo"
     },
     
     template: _.template($("#addNewToDoTemplate").html()),

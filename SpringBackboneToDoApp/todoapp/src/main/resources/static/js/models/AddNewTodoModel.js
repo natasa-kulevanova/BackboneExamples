@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.addNewToDo = Backbone.Model.extend({
+app.todo = Backbone.Model.extend({
 
     defaults:{
        

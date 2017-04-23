@@ -9,6 +9,7 @@ app.allCompletedTodosView = Backbone.View.extend({
     },
                                         
     render: function(){
+    	this.$el.html('');
     	this.collection.each(this.addToDo, this);
         $("#completedView").html(this.el);
         return this;
