@@ -31,12 +31,14 @@
     
     <script id="completedBtn" type="text/template">
     	<a href="#completedToDos" id="completed_todos" class="button-js button_green">View completed todos</a>
-    </script>
+ 	</script>
    
    <ul id="completedView"></ul>
    
-   <script id="completedToDoTmpl" type="text/template">
-		<li id="compl_todo"><%= title %></li>
+   <script id="completedToDosTmpl" type="text/template">
+		<% _.each(collection, function(model) { %>
+			<li id="compl_todo"><%= model.title %></li>
+		<% }); %>
 	</script>
    
     <script src="js/libs/jquery.js"></script>
@@ -46,13 +48,10 @@
     <script type="text/javascript" src="resource/todoData.js"></script>
     
     <script src="js/models/ToDoModel.js"></script>
-    <script src="js/models/AddNewToDoModel.js"></script>
-    <script src="js/models/AllCompletedTodosModel.js"></script>
     <script src="js/collections/ToDoCollection.js"></script>
     <script src="js/views/AllToDosView.js"></script>
     <script src="js/views/ToDoView.js"></script>
     <script src="js/views/AddNewToDoView.js"></script>
-    <script src="js/views/CompletedToDoView.js"></script>
     <script src="js/views/AllCompletedTodosView.js"></script>
     <script src="js/router/Router.js"></script>
     <script src="js/main/ToDoApp.js"></script>

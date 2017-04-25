@@ -2,25 +2,22 @@ var app = app || {};
 
 app.allCompletedTodosView = Backbone.View.extend({
 
-    tagName: "section",
+    el: '#completedView',
+    
+    template: _.template($('#completedToDosTmpl').html()),
     
     initialize: function(){
     	
     },
                                         
-    render: function(){
+    render: function(completedTodosCollection){
+    	this.collection = completedTodosCollection;
     	this.$el.html('');
-    	this.collection.each(this.addToDo, this);
-        $("#completedView").html(this.el);
+    	this.$el.html(this.template({
+    	    collection: this.collection.toJSON()
+    	}));
+    	
         return this;
     },
-    
-    addToDo: function(toDo){
-    	if(toDo.get('done')){
-    		  var todoView =  new app.completedTodoView({ model: toDo });
-    	      this.$el.append(todoView.render().el);
-    	}
-    },
-
     
 })

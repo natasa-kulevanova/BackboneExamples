@@ -1,8 +1,5 @@
-var todoModel = new app.todo();
-var addNewToDoView = new app.addNewToDoView({model : todoModel});
-$("#addNewToDo").html(addNewToDoView.render().el);
-$("#addNewToDo").show();
-
+var addNewToDoView = new app.addNewToDoView();
+addNewToDoView.render();
 
 var toDoCollection = new app.toDoCollection();
 var allToDosView = new app.allToDosView({collection: toDoCollection});

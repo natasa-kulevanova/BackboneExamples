@@ -2,8 +2,7 @@ var app = app || {};
 
 app.addNewToDoView = Backbone.View.extend({
 
-    tagName: "div",
-    className: "addNewTodo",
+    el: '#addNewToDo',
     
     events: {
     	  "click #add_todo" : "createNewTodo",
@@ -17,7 +16,7 @@ app.addNewToDoView = Backbone.View.extend({
     },
                                         
     render: function(){
-        var addNewTodoTemplate = this.template(this.model.toJSON());
+        var addNewTodoTemplate = this.template();
         this.$el.html(addNewTodoTemplate);
         return this;
     },
