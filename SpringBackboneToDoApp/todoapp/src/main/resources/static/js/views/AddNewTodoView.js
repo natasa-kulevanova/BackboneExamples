@@ -5,8 +5,7 @@ app.addNewToDoView = Backbone.View.extend({
     el: '#addNewToDo',
     
     events: {
-    	  "click #add_todo" : "createNewTodo",
-    	  "keypress #new-todo" : "addNewToDo"
+    	  "click #add_todo" : "createNewTodo"
     },
     
     template: _.template($("#addNewToDoTemplate").html()),
@@ -33,7 +32,7 @@ app.addNewToDoView = Backbone.View.extend({
     	$("#new-todo").val('');
     	toDoCollection.create({ title : todoTitle, done : false}, {
     		success: function(model, response){
-    			Backbone.trigger('updateToDos', this);
+    			Backbone.trigger('updateToDos', that);
 	    	}
     	});
     }

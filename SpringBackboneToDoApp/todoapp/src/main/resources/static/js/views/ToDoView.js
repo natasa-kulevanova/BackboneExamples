@@ -28,17 +28,11 @@ app.toDoView = Backbone.View.extend({
         		return item.id == that.model.id;
         });
         todoItem.set('done', !todoItem.get("done"));
-        todoItem.save({},{
-    		success: function(model, response){}
-    	});
+        todoItem.save();
     },
     
     deleteToDo: function(){
-    	var that = this;
-    	todoItem = _.find(toDoCollection.models, function(item){
-       		return item.id == that.model.id;
-           });
-    	todoItem.destroy({
+    	this.model.destroy({
     		success: function(model, response){
 				Backbone.trigger('updateToDos', this);
 	    	}

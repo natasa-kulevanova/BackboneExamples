@@ -8,12 +8,8 @@ app.toDo = Backbone.Model.extend({
 	},
 
 	initialize: function(){
-		this.on('change', function(){
-			console.log("The model has been changed.");
-		});
-		
-		this.on('change:title', function(){
-			console.log("The title has been changed.");
+		this.on('change:done', function(){
+			console.log("done has value: "+this.get('done'));
 		});
 	}
 
