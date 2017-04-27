@@ -10,7 +10,8 @@ app.allToDosView = Backbone.View.extend({
     
     initialize: function(){
     	Backbone.on('updateToDos', this.render, this);
-    	this.collection.bind("reset", _.bind(this.render, this));
+    	Backbone.on('updateToDoCollection', this.updateView, this);
+    	this.collection.on("reset", this.render, this);
         this.collection.fetch({
             reset: true
         });

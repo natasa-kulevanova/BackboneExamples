@@ -14,7 +14,7 @@ import com.seavus.entities.Todo;
 import com.seavus.services.ToDoService;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/todos")
 public class ToDoRestController {
 	
 	private ToDoService toDoService;
@@ -25,24 +25,24 @@ public class ToDoRestController {
     }
 
     
-    @RequestMapping(method = RequestMethod.GET, value = "todos")
+    @RequestMapping(method = RequestMethod.GET)
 	public List<Todo> getAllTodos(){
 		return this.toDoService.getAllToDos();
 	}
     
-    @RequestMapping(method = RequestMethod.POST, value = "todos")
+    @RequestMapping(method = RequestMethod.POST)
     public boolean saveTodo(@RequestBody Todo todo){
     	this.toDoService.saveItem(todo);
     	return true;
     }
     
-    @RequestMapping(method = RequestMethod.PUT, value = "todos/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/{id}")
     public boolean updateTodo(@RequestBody Todo todo){
     	this.toDoService.updateTodo(todo);
     	return true;
     }
     
-    @RequestMapping(method = RequestMethod.DELETE, value = "todos/{id}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
 	public boolean deleteItem(@PathVariable Long id){
 		this.toDoService.deleteTodo(id);
 		return true;

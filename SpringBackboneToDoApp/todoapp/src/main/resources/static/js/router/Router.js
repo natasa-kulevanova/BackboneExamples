@@ -17,13 +17,12 @@ app.Router = Backbone.Router.extend({
     	$("#addNewToDo").hide();
     	$("#allToDos").hide();
     	$("#controls").hide();
-    	var completedTodosCollection = new app.toDoCollection(toDoCollection.where({done: true}));
+    	
     	if(!allCompletedTodosView){
-    		allCompletedTodosView = new app.allCompletedTodosView();
+    		allCompletedTodosView = new app.allCompletedTodosView({collection: toDoCollection});
     	}
-    	allCompletedTodosView.render(completedTodosCollection);
+    	allCompletedTodosView.render();
     	$("#completedView").show();
     }
-   
     
 });

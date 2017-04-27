@@ -20,19 +20,13 @@ app.addNewToDoView = Backbone.View.extend({
         return this;
     },
     
-    addNewToDo: function(e){
-    	if(e.which === 13){
-    		this.createNewTodo();
-    	}
-    },
-    
     createNewTodo: function(){
     	var that = this;
     	var todoTitle = $("#new-todo").val();
     	$("#new-todo").val('');
     	toDoCollection.create({ title : todoTitle, done : false}, {
     		success: function(model, response){
-    			Backbone.trigger('updateToDos', that);
+    			Backbone.trigger('updateToDoCollection', that);
 	    	}
     	});
     }
